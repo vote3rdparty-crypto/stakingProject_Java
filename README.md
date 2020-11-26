@@ -1,5 +1,7 @@
 # stakingProject_Java
 Student long term staking project in JavaScript
+
+
 This is an extremely simple interface for what I hope will be something I can continue to work on until it's slicker than snot on a doorknob.
 
 Upon loading the page, please open up your console. 
