@@ -1,0 +1,74 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <meta charset="UTF-8">
+    <title>Toss a Coin to your Programmer</title>
+</head>
+
+
+<body>
+
+<h1>"Enter how much of your asset your would like to stake and click submit"</h1>
+
+<form id="demo" onsubmit="greet(); return false;">
+  <input id = "name" placeholder="Asset" type="text"/>
+  <input type ="submit"/>
+</form>
+
+<h1>"Enter your name and click claim rewards to withdraw yo money!"</h1>
+
+<form id="demo" onsubmit="claim();">
+  <input id = "blame" placeholder="Account Name" type="text"/>
+  <input type ="submit"/>
+</form>
+
+<button onclick="flipCoin()">Heads or Tails</button>
+<p id="coin"></p>
+
+<script>
+function flipCoin(){
+  function getRandomInt(min, max){
+    return Math.floor(Math.random() * (max -min)) + min;
+  }
+  var num = getRandomInt(1, 3);
+
+  switch(num) {
+    case 1:
+    answer = "Heads";
+    break;
+    case 2:
+    answer = "Tails";
+    break;
+  }
+document.getElementById("coin").innerHTML = answer;
+}
+
+  var myVar = $("#name").val();//is this the correct way to store the user value?
+
+function claim(){
+alert('Enjoy your prosperity!');//how would I inset the stored user value here?
+document.getElementById('name').value = num;
+}
+
+function greet(){
+  alert('Your staked assets will now accrue interest until such time as you withdraw them or there are no more rewards to earn!');
+
+const accrueInterest = 1000;
+let asset = 0;
+while (accrueInterest){
+  console.log(`There are ${asset} gaining interest.`)
+  asset++;
+  if (asset === 1000){
+    console.log("There are no more rewards to earn!");
+    break;
+
+    }
+
+  }
+}
+
+
+</script>
+
+</body>
+</html>
